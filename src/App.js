@@ -25,6 +25,10 @@ const App = () => {
     },
   ];
 
+  const addExpenseHandler = (expense) => {
+    console.log("in APP.js");
+    console.log(expense);
+  };
   // return React.createElement(
   //   'div',
   //   {},
@@ -34,7 +38,8 @@ const App = () => {
 
   return (
     <div>
-      <NewExpense />
+      <NewExpense onAddExpense={addExpenseHandler} />
+      {/* onAddexpense - prop. saveExpanse.. - function pointer */}
       <Expenses items={expenses} />
     </div>
   );
